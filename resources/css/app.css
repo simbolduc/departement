@@ -37,3 +37,11 @@ header nav {
         width:32rem;
     }
 }
+
+.bg-light-primary {
+    background-color:#81D4FA;
+}
+
+.bg-dark-primary {
+    background-color:#1A237E;
+}
