@@ -1,0 +1,12 @@
+{
+    "name": "simbo/technique",
+    "authors": [
+        {
+            "name": "Simon Bolduc",
+            "email": "36117510+simbolduc@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    }
+}

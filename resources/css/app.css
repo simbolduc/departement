@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+
+html, body {
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    background-color:#F3F4F6;
+}
+
+header {
+    height:800px;
+    background-image: url("../images/backgrounds/day_bg.png");
+    background-size: cover;
+    background-position: bottom;
+}
+
+body.dark {
+    background-color:#111827;
+}
+
+body.dark header {
+    background-image: url("../images/backgrounds/night_bg.png");
+}
+
+header nav {
+    font-family: 'Comfortaa', cursive;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .w-128 {
+        width:32rem;
+    }
+}
