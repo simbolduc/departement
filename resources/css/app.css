@@ -45,3 +45,12 @@ header nav {
 .bg-dark-primary {
     background-color:#1A237E;
 }
+
+.owl-carousel .owl-nav {
+    text-align: center;
+    width:100%;
+}
+
+.owl-carousel .owl-nav button {
+    width:32px;
+}

@@ -8,6 +8,8 @@
     <title>Technique Informatique</title>
 
     <link rel="stylesheet" href="public/css/app.css">
+
+    <link rel="stylesheet" href="../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
 </head>
 <body class="dark">
     <header class="relative w-full bg-gray-100 px-32 text-white dark:bg-gray-900">
@@ -61,13 +63,15 @@
         <?= $page_content ?? ''?>
     </section>
 
-    <footer class="w-full dark:text-white px-32 py-8 text-sm font-bold">
+    <footer class="w-full bg-white dark:bg-gray-800 dark:text-white px-32 py-4 text-sm font-bold">
         Copyright &copy; 2021
-        <span class="ml-8">
+        <span class="float-right">
             Site web crée par Simon Bolduc
         </span>
     </footer>
 
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
     <script src="public/js/app.js"></script>
+    <?= $scripts ?? '' ?>
 </body>
 </html>
