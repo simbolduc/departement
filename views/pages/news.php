@@ -30,22 +30,32 @@
         <span class="inline-block mt-1 ml-2">(32 commentaires)</span>
     </div>
     <div class="w-full p-4">
-        <div class="w-full flex flex-wrap mt-4 bg-gray-800 p-4 rounded-lg">
+        <div class="w-full flex flex-wrap mt-4 bg-gray-800 p-4 rounded-lg hover:transform hover:scale-105 transition duration-500 ease-in-out">
             <strong>SimonB</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ducimus eveniet laborum maxime, numquam quis ut. Assumenda repellat reprehenderit sit totam! Alias amet dolor facere illo impedit neque reprehenderit soluta!</p>
             <span class="inline-block text-xs mt-1">Publié le 27 Jan 2021 à 04:12</span>
         </div>
-        <div class="w-full flex flex-wrap mt-4 bg-gray-800 p-4 rounded-lg">
+        <div class="w-full flex flex-wrap mt-4 bg-gray-800 p-4 rounded-lg hover:transform hover:scale-105 transition duration-500 ease-in-out">
             <strong>SimonB</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ducimus eveniet laborum maxime, numquam quis ut. Assumenda repellat reprehenderit sit totam! Alias amet dolor facere illo impedit neque reprehenderit soluta!</p>
             <span class="inline-block text-xs mt-1">Publié le 27 Jan 2021 à 04:12</span>
         </div>
-        <div class="w-full flex flex-wrap mt-4 bg-gray-800 p-4 rounded-lg">
+        <div class="w-full flex flex-wrap mt-4 bg-gray-800 p-4 rounded-lg hover:transform hover:scale-105 transition duration-500 ease-in-out">
             <strong>SimonB</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ducimus eveniet laborum maxime, numquam quis ut. Assumenda repellat reprehenderit sit totam! Alias amet dolor facere illo impedit neque reprehenderit soluta!</p>
             <span class="inline-block text-xs mt-1">Publié le 27 Jan 2021 à 04:12</span>
         </div>
-        <div class="w-full flex flex-wrap mt-4 bg-gray-800 p-4 rounded-lg">
+        <div class="w-full flex flex-wrap mt-4 bg-gray-800 p-4 rounded-lg hover:transform hover:scale-105 transition duration-500 ease-in-out">
+            <strong>SimonB</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ducimus eveniet laborum maxime, numquam quis ut. Assumenda repellat reprehenderit sit totam! Alias amet dolor facere illo impedit neque reprehenderit soluta!</p>
+            <span class="inline-block text-xs mt-1">Publié le 27 Jan 2021 à 04:12</span>
+        </div>
+        <div class="w-full flex flex-wrap mt-4 bg-gray-800 p-4 rounded-lg hover:transform hover:scale-105 transition duration-500 ease-in-out">
+            <strong>SimonB</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ducimus eveniet laborum maxime, numquam quis ut. Assumenda repellat reprehenderit sit totam! Alias amet dolor facere illo impedit neque reprehenderit soluta!</p>
+            <span class="inline-block text-xs mt-1">Publié le 27 Jan 2021 à 04:12</span>
+        </div>
+        <div class="w-full flex flex-wrap mt-4 bg-gray-800 p-4 rounded-lg hover:transform hover:scale-105 transition duration-500 ease-in-out">
             <strong>SimonB</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ducimus eveniet laborum maxime, numquam quis ut. Assumenda repellat reprehenderit sit totam! Alias amet dolor facere illo impedit neque reprehenderit soluta!</p>
             <span class="inline-block text-xs mt-1">Publié le 27 Jan 2021 à 04:12</span>

@@ -1,3 +1,3 @@
 <?php
 $router->map('GET', '/', 'HomeController@index', 'page.home');
-$router->map('GET', '/news/[a:slug]', 'NewsController@index', 'page.news');
+$router->map('GET', '/news/[i:id]', 'NewsController@index', 'page.news');
