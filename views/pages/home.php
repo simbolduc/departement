@@ -43,7 +43,7 @@
                         <p class="p-4 pt-0">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem consequuntur excepturi expedita nam repellat. At aut distinctio, eligendi illo ipsam natus necessitatibus nulla odio placeat, quas, recusandae repellendus voluptatem?
                         </p>
-                        <a href="#" class="bg-indigo-400 inline-block py-1 px-3 rounded-md mt-2">Voir la nouvelle</a>
+                        <a href="<?= $this->router->generate('page.news', array('id' => 1)) ?>" class="bg-indigo-400 inline-block py-1 px-3 rounded-md mt-2">Voir la nouvelle</a>
                     </div>
                 </div>
                 <div class="p-8 w-1/3">

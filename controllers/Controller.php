@@ -4,6 +4,7 @@ namespace controllers;
 class Controller {
 
     private $router;
+    private $db;
 
     public function __construct($router){
         $this->router = $router;

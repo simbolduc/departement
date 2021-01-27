@@ -20,7 +20,9 @@ if(is_array($match)) {
                 try {
                     $class = new ReflectionClass('\\controllers\\' . $exploded[0]);
                     $instance = $class->newInstanceArgs(array($router));
-                    call_user_func_array(array($instance, $exploded[1]), $match['params']);
+                    $response = call_user_func_array(array($instance, $exploded[1]), $match['params']);
+                    if(!$response)
+                        echo "Couldn't return demanded view";
                 } catch (ReflectionException $e) {
                     echo $e->getMessage();
                 }
