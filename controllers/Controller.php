@@ -10,10 +10,6 @@ class Controller {
         $this->router = $router;
     }
 
-    protected function getRoutes() {
-        return $this->router->getRoutes();
-    }
-
     protected function view(String $view, Array $data = []) {
         // Declare each key/value pair as a variable
         extract($data);

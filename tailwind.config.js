@@ -13,6 +13,7 @@ module.exports = {
       backgroundColor: ['dark'],
       scale: ['hover'],
       transform: ['hover'],
+      borderWidth: ['last']
     },
   },
   plugins: [],

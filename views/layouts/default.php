@@ -15,11 +15,11 @@
     <header class="relative w-full bg-gray-100 px-32 text-white dark:bg-gray-900">
         <nav class="flex font-bold py-8 w-full">
             <div class="w-3/4 flex-none flex flex-wrap">
-                <a href="/" class="inline-block mr-4">
+                <a href="<?= $this->router->generate('page.home') ?>" class="inline-block mr-4">
                     <img class="dark:hidden inline-block" src="/public/images/logos/dark_dep.png" alt="Logo département">
                     <img class="dark:inline-block hidden" src="/public/images/logos/dep.png" alt="Logo département">
                 </a>
-                <a href="#" class="inline-block mr-4 pt-1">Accueil</a>
+                <a href="<?= $this->router->generate('page.home') ?>" class="inline-block mr-4 pt-1">Accueil</a>
                 <a href="#" class="inline-block mr-4 pt-1">Nouveautés</a>
                 <a href="#" class="inline-block pt-1">Événements</a>
             </div>
