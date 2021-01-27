@@ -29,8 +29,8 @@
                     <img class="theme-toggle dark:hidden inline-block" src="/public/images/svgs/moon.svg" alt="Lune">
                     <img class="theme-toggle dark:inline-block hidden" src="/public/images/svgs/sunny.svg" alt="Soleil">
                 </a>
-                <a href="#" class="inline-block bg-indigo-400 py-1 rounded-lg px-3 ml-4 pt-1">Inscription</a>
-                <a href="#" class="inline-block pt-1">Connexion</a>
+<!--                <a href="#" class="inline-block bg-indigo-400 py-1 rounded-lg px-3 ml-4 pt-1">Inscription</a>-->
+                <a href="<?= $this->router->generate('page.auth.login') ?>" class="inline-block pt-1">Connexion</a>
             </div>
         </nav>
         <section class="mt-12 flex flex-wrap relative">

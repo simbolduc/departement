@@ -6,8 +6,9 @@ class Controller {
     private $router;
     private $db;
 
-    public function __construct($router){
+    public function __construct($router, $db){
         $this->router = $router;
+        $this->db = $db;
     }
 
     protected function view(String $view, Array $data = []) {
@@ -25,6 +26,14 @@ class Controller {
             return false;
         }
         return true;
+    }
+
+    protected function getRouter() {
+        return $this->router;
+    }
+
+    protected function getDatabase() {
+        return $this->db;
     }
 
     protected function redirectToUrl($url) {
