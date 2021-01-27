@@ -20,6 +20,7 @@ class Controller {
             ob_start();
             require __DIR__.'/../views/pages/'.str_replace('.', '/', $view).'.php';
             $page_content = ob_get_clean();
+
             require __DIR__.'/../views/layouts/default.php';
         } catch (\Exception $e) {
             echo $e->getMessage();

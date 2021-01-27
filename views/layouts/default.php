@@ -7,17 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Technique Informatique</title>
 
-    <link rel="stylesheet" href="/public/css/app.css">
+    <link rel="stylesheet" href="/css/app.css">
 
-    <link rel="stylesheet" href="/../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/../node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
 </head>
 <body class="dark">
     <header class="relative w-full bg-gray-100 px-32 text-white dark:bg-gray-900">
         <nav class="flex font-bold py-8 w-full">
             <div class="w-3/4 flex-none flex flex-wrap">
                 <a href="<?= $this->router->generate('page.home') ?>" class="inline-block mr-4">
-                    <img class="dark:hidden inline-block" src="/public/images/logos/dark_dep.png" alt="Logo département">
-                    <img class="dark:inline-block hidden" src="/public/images/logos/dep.png" alt="Logo département">
+                    <img class="dark:hidden inline-block" src="/images/logos/dark_dep.png" alt="Logo département">
+                    <img class="dark:inline-block hidden" src="/images/logos/dep.png" alt="Logo département">
                 </a>
                 <a href="<?= $this->router->generate('page.home') ?>" class="inline-block mr-4 pt-1">Accueil</a>
                 <a href="#" class="inline-block mr-4 pt-1">Nouveautés</a>
@@ -26,8 +26,8 @@
 
             <div class="w-1/4 flex-none flex flex-wrap flex-row-reverse">
                 <a href="#" class="inline-block ml-4">
-                    <img class="theme-toggle dark:hidden inline-block" src="/public/images/svgs/moon.svg" alt="Lune">
-                    <img class="theme-toggle dark:inline-block hidden" src="/public/images/svgs/sunny.svg" alt="Soleil">
+                    <img class="theme-toggle dark:hidden inline-block" src="/images/svgs/moon.svg" alt="Lune">
+                    <img class="theme-toggle dark:inline-block hidden" src="/images/svgs/sunny.svg" alt="Soleil">
                 </a>
 <!--                <a href="#" class="inline-block bg-indigo-400 py-1 rounded-lg px-3 ml-4 pt-1">Inscription</a>-->
                 <a href="<?= $this->router->generate('page.auth.login') ?>" class="inline-block pt-1">Connexion</a>
@@ -43,9 +43,9 @@
                 </div>
                 <div class="w-7/12 pl-8 pt-8">
                     <div class="relative ml-32">
-                        <img class="dark:hidden block absolute top-0 right-0 -mt-24" src="/public/images/svgs/sun.svg" alt="Soleil">
-                        <img class="dark:hidden block absolute top-0 right-0 -mt-12 -mr-6" src="/public/images/svgs/cloud.svg" alt="Nuage">
-                        <img class="dark:block hidden absolute top-0 right-0 -mt-32 -mr-24" src="/public/images/svgs/star.svg" alt="Nuage">
+                        <img class="dark:hidden block absolute top-0 right-0 -mt-24" src="/images/svgs/sun.svg" alt="Soleil">
+                        <img class="dark:hidden block absolute top-0 right-0 -mt-12 -mr-6" src="/images/svgs/cloud.svg" alt="Nuage">
+                        <img class="dark:block hidden absolute top-0 right-0 -mt-32 -mr-24" src="/images/svgs/star.svg" alt="Nuage">
                     </div>
                 </div>
             </div>
@@ -70,8 +70,8 @@
         </span>
     </footer>
 
-    <script src="/../../node_modules/jquery/dist/jquery.js"></script>
-    <script src="/public/js/app.js"></script>
+    <script src="/../node_modules/jquery/dist/jquery.js"></script>
+    <script src="/js/app.js"></script>
     <?= $scripts ?? '' ?>
 </body>
 </html>
