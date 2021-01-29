@@ -39,8 +39,12 @@ class Controller {
         return $this->db;
     }
 
-    protected function redirectToUrl($url) {
+    protected function redirectToUrl(String $url, Array $data = []) {
+        foreach($data as $k => $v) {
+            Session::put($k, $v);
+        }
 
+        header('Location: '.$url);
     }
 
     protected function redirectToRoute(String $route, Array $data = []) {
