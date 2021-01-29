@@ -3,11 +3,9 @@ let body = document.getElementsByTagName('body')[0]
 // Check if there's a theme cookie saved
 const value = `; ${document.cookie}`
 const parts = value.split(`; dark=`)
-if (parts.length === 2) {
-    let present = parts.pop().split(';').shift()
-    if (present == "false")
-        body.classList.remove('dark')
-}
+let present = parts[1].split(';').shift()
+if (present == "false")
+    body.classList.remove('dark')
 
 // Theme toggling using buttons
 const btn = document.getElementsByClassName('theme-toggle')
