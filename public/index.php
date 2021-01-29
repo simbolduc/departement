@@ -1,9 +1,9 @@
 <?php
-session_start();
+session_start(); // Start sessions to be able to store user sessions ($_SESSION)
 
-require '../vendor/autoload.php';
-require '../database/Database.php';
-require '../app/Session.php';
+require_once '../vendor/autoload.php';
+require_once '../database/Database.php';
+require_once '../app/Session.php';
 
 $router = new AltoRouter();
 
@@ -17,19 +17,31 @@ $database->setHost($database_config['host'])
         ->setPassword($database_config['password']);
 $db_conn = $database->connect();
 
-require '../routes.php';
+require '../config/routes.php';
 
 $match = $router->match();
 
 if(is_array($match)) {
+    // Check for middlewares
+    $middlewares = require '../config/middlewares.php';
+    if(isset($middlewares[$match['name']])) {
+        $middleware = $middlewares[$match['name']];
+        if(is_array($middleware)) {
+            foreach($middleware as $m) {
+                callMiddleware($m, $match['params'], $router, $db_conn);
+            }
+        } else callMiddleware($middleware, $match['params'], $router, $db_conn);
+    }
+
+    // Load controller
     $exploded = explode('@', $match['target']);
 
     if(is_array($exploded) && count($exploded) >= 2) {
-        $path = '../controllers/' . $exploded[0] . '.php';
+        $path = '../app/controllers/' . $exploded[0] . '.php';
         if (file_exists($path)) {
-            require '../controllers/Controller.php';
-            require '../controllers/' . $exploded[0] . '.php';
-            if (class_exists('\\controllers\\' . $exploded[0])) {
+            require_once '../app/controllers/Controller.php';
+            require_once '../app/controllers/' . $exploded[0] . '.php';
+            if (class_exists('\\app\\controllers\\' . $exploded[0])) {
                 $instance = getControllerClassInstance($exploded[0], $router, $db_conn);
                 $response = call_user_func_array(array($instance, $exploded[1]), $match['params']) or die("Couldn't call specified method");
                 if(!$response)
@@ -52,9 +64,22 @@ if(is_array($match)) {
 
 function getControllerClassInstance($controller, $router, $db) {
     try {
-        $class = new ReflectionClass('\\controllers\\' . $controller);
+        $class = new ReflectionClass('\\app\\controllers\\' . $controller);
         return $class->newInstanceArgs(array($router, $db));
     } catch (ReflectionException $e) {
         die($e->getMessage());
+    }
+}
+
+function callMiddleware($middleware, $route_params, $router, $db) {
+    try {
+        require_once '../app/middlewares/Middleware.php';
+        require_once '../app/middlewares/IMiddleware.php';
+        require_once '../'.str_replace('\\', '/', $middleware).'.php';
+        $class = new ReflectionClass($middleware);
+        $instance = $class->newInstanceArgs(array($router, $db));
+        call_user_func_array(array($instance, 'handle'), array($_REQUEST, $route_params)) or die("Couldn't call handle method");
+    } catch (ReflectionException $e) {
+        die("Couldn't load specified middleware");
     }
 }

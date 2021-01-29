@@ -1,7 +1,7 @@
 <?php
-namespace controllers\auth;
+namespace app\controllers\auth;
 
-use controllers\Controller;
+use app\controllers\Controller;
 
 class AuthController extends Controller {
 
@@ -18,10 +18,18 @@ class AuthController extends Controller {
     }
 
     public function login() {
-//        var_dump($_POST);
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $errors = array();
+        if($email != 'test@test.com')
+            array_push($errors, 'Incorrect email address');
+
+        if($password != '123123')
+            array_push($errors, 'Incorrect password');
 
         return $this->redirectToRoute('page.auth.login', [
-            'error' => 'Impossible de trouver l\'utilisateur'
+            'error' => $errors
         ]);
     }
 

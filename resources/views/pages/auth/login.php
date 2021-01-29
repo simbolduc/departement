@@ -2,12 +2,14 @@
     <h1 class="text-2xl font-bold">Connexion</h1>
     <?php
     if(\app\Session::has('error')) {
+        foreach(\app\Session::get('error') as $error) {
     ?>
-        <div class="w-full bg-red-400 p-4 rounded-lg mt-2">
-            <span class="font-bold">Erreur! </span>
-            <?= \app\Session::get('error') ?>
-        </div>
+            <div class="w-full bg-red-400 p-4 rounded-lg mt-2">
+                <span class="font-bold">Erreur! </span>
+                <?= $error ?>
+            </div>
     <?php
+        }
     }
     ?>
     <form method="post" action="#" class="bg-gray-800 p-8 mt-4 rounded-lg">

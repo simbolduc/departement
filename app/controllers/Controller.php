@@ -1,5 +1,5 @@
 <?php
-namespace controllers;
+namespace app\controllers;
 
 use app\Session;
 
@@ -20,10 +20,10 @@ class Controller {
         // Construct the view with the variables
         try {
             ob_start();
-            require __DIR__.'/../views/pages/'.str_replace('.', '/', $view).'.php';
+            require __DIR__ . '/../../resources/views/pages/' .str_replace('.', '/', $view).'.php';
             $page_content = ob_get_clean();
 
-            require __DIR__.'/../views/layouts/default.php';
+            require __DIR__ . '/../../resources/views/layouts/default.php';
         } catch (\Exception $e) {
             echo $e->getMessage();
             return false;
