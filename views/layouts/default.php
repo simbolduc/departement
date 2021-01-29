@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="/css/app.css">
 
-    <link rel="stylesheet" href="/../node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" />
 </head>
 <body class="dark">
     <header class="relative w-full bg-gray-100 px-32 text-white dark:bg-gray-900">
@@ -70,7 +70,7 @@
         </span>
     </footer>
 
-    <script src="/../node_modules/jquery/dist/jquery.js"></script>
+    <script src="/js/jquery.js"></script>
     <script src="/js/app.js"></script>
     <?= $scripts ?? '' ?>
 </body>

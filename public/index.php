@@ -1,8 +1,9 @@
 <?php
+session_start();
+
 require '../vendor/autoload.php';
 require '../database/Database.php';
-
-$uri = $_SERVER['REQUEST_URI'];
+require '../app/Session.php';
 
 $router = new AltoRouter();
 

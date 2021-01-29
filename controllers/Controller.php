@@ -1,6 +1,8 @@
 <?php
 namespace controllers;
 
+use app\Session;
+
 class Controller {
 
     private $router;
@@ -41,8 +43,19 @@ class Controller {
 
     }
 
-    protected function redirectToRoute($route) {
+    protected function redirectToRoute(String $route, Array $data = []) {
+        try {
+            $url = $this->router->generate($route);
 
+            foreach($data as $k => $v) {
+                Session::put($k, $v);
+            }
+        } catch (\RuntimeException $e) {
+            return die('Cannot find redirection route name');
+        }
+
+        header('Location: '.$url);
+        return true;
     }
 
 }

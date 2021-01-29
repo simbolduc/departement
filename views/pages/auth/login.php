@@ -1,9 +1,19 @@
 <section class="w-1/3 m-auto">
     <h1 class="text-2xl font-bold">Connexion</h1>
+    <?php
+    if(\app\Session::has('error')) {
+    ?>
+        <div class="w-full bg-red-400 p-4 rounded-lg mt-2">
+            <span class="font-bold">Erreur! </span>
+            <?= \app\Session::get('error') ?>
+        </div>
+    <?php
+    }
+    ?>
     <form method="post" action="#" class="bg-gray-800 p-8 mt-4 rounded-lg">
         <strong>Adresse courriel</strong>
         <label for="email" class="text-sm mb-2 inline-block w-full">
-            <input type="email" name="email" value="<?= $default ?>" placeholder="Adresse courriel" class="w-full bg-transparent focus:outline-none border-b border-solid border-white p-1" autocomplete="off">
+            <input type="email" name="email" placeholder="Adresse courriel" class="w-full bg-transparent focus:outline-none border-b border-solid border-white p-1" autocomplete="off">
         </label>
         <strong class="mt-2 inline-block">Mot de passe</strong>
         <label for="password" class="text-sm mb-2 inline-block w-full">

@@ -38,7 +38,7 @@
             <div class="flex flex-wrap">
                 <div class="p-8 w-1/3">
                     <div class="p-8 bg-white dark:bg-gray-800 rounded-lg">
-                        <div class="bg-cover bg-center w-full h-64" style="background-image:url('public/images/miscs/online-classes.jpg');"></div>
+                        <div class="bg-cover bg-center w-full h-64" style="background-image:url('/images/miscs/online-classes.jpg');"></div>
                         <h3 class="font-bold font-2xl p-4">Le télétravail</h3>
                         <p class="p-4 pt-0">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem consequuntur excepturi expedita nam repellat. At aut distinctio, eligendi illo ipsam natus necessitatibus nulla odio placeat, quas, recusandae repellendus voluptatem?
@@ -48,7 +48,7 @@
                 </div>
                 <div class="p-8 w-1/3">
                     <div class="p-8 bg-white dark:bg-gray-800 rounded-lg">
-                        <div class="bg-cover bg-center w-full h-64" style="background-image:url('public/images/miscs/school-class.jpg');"></div>
+                        <div class="bg-cover bg-center w-full h-64" style="background-image:url('/images/miscs/school-class.jpg');"></div>
                         <h3 class="font-bold font-2xl p-4">De nouveaux locaux</h3>
                         <p class="p-4 pt-0">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem consequuntur excepturi expedita nam repellat. At aut distinctio, eligendi illo ipsam natus necessitatibus nulla odio placeat, quas, recusandae repellendus voluptatem?
@@ -58,7 +58,7 @@
                 </div>
                 <div class="p-8 w-1/3">
                     <div class="p-8 bg-white dark:bg-gray-800 rounded-lg">
-                        <div class="bg-cover bg-center w-full h-64" style="background-image:url('public/images/miscs/student.jpg');"></div>
+                        <div class="bg-cover bg-center w-full h-64" style="background-image:url('/images/miscs/student.jpg');"></div>
                         <h3 class="font-bold font-2xl p-4">Des projets de VR</h3>
                         <p class="p-4 pt-0">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem consequuntur excepturi expedita nam repellat. At aut distinctio, eligendi illo ipsam natus necessitatibus nulla odio placeat, quas, recusandae repellendus voluptatem?
@@ -71,7 +71,7 @@
             <div class="flex flex-wrap">
                 <div class="p-8 w-1/3">
                     <div class="p-8 bg-white dark:bg-gray-800 rounded-lg">
-                        <div class="bg-cover bg-center w-full h-64" style="background-image:url('public/images/miscs/student2.jpg');"></div>
+                        <div class="bg-cover bg-center w-full h-64" style="background-image:url('/images/miscs/student2.jpg');"></div>
                         <h3 class="font-bold font-2xl p-4">Comment conceptualiser</h3>
                         <p class="p-4 pt-0">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem consequuntur excepturi expedita nam repellat. At aut distinctio, eligendi illo ipsam natus necessitatibus nulla odio placeat, quas, recusandae repellendus voluptatem?
@@ -85,7 +85,7 @@
 </section>
 
 <?php ob_start() ?>
-<script src="/../../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
 
 <script>
     $(document).ready(function(){
